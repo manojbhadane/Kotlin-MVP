@@ -3,6 +3,6 @@
 
     <string name="enter_username">Please enter username</string>
     <string name="enter_password">Please enter password</string>
-    <string name="user_saved">user loggedIn successfully</string>
+    <string name="user_saved">User logged In</string>
 
 </resources>

@@ -11,13 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name="com.manojbhadane.kotlinmvpdemo.LoginActivity">
+        <activity
+            android:name=".Login.LoginActivity"
+            android:label="Login"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Dashboard.DashBoardActivity"
+            android:label="Dashboard"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
     </application>
 
 </manifest>
