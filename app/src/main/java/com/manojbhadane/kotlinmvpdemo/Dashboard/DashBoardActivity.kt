@@ -1,5 +1,6 @@
 package com.manojbhadane.kotlinmvpdemo.Dashboard
 
+import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import android.widget.TextView
 import com.manojbhadane.kotlinmvpdemo.BaseActivity
@@ -18,7 +19,7 @@ class DashBoardActivity : BaseActivity() {
 
     override fun init() {
 
-        var toolbar = findViewById(R.id.toolbar) as android.support.v7.widget.Toolbar
+        var toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
