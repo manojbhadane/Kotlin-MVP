@@ -17,9 +17,9 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
         presenter = LoginPresenerImpl(this)
 
-        val mEdtPass = findViewById(R.id.editText2) as android.widget.EditText
-        val mBtnLogin = findViewById(R.id.button_login) as android.widget.Button
-        val mEdtUsername = findViewById(R.id.editText) as android.widget.EditText
+        val mEdtPass = findViewById(R.id.editText2) as EditText
+        val mBtnLogin = findViewById(R.id.button_login) as Button
+        val mEdtUsername = findViewById(R.id.editText) as EditText
 
         mBtnLogin.setOnClickListener() {
             presenter?.processLogin(mEdtUsername.text.toString(), mEdtPass.text.toString())
