@@ -3,9 +3,9 @@ package com.itgurussoftware.kotlinmvpdemo
 /**
  * Created by manoj.bhadane on 26-09-2017.
  */
-class PresenerImpl(view: CreateUserView) : Presenter {
+class LoginPresenerImpl(view: LoginView) : LoginPresenter {
 
-    private var mView: CreateUserView? = view
+    private var mView: LoginView? = view
 
     override fun processLogin(strUname: String, strPass: String) {
         if (strUname.length == 0) {

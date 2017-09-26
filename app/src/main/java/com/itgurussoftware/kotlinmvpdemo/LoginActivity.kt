@@ -6,18 +6,18 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity(), CreateUserView {
+class LoginActivity : AppCompatActivity(), LoginView {
 
     //    private val mBtnLogin: Button? = null
     //    private var mEdtPass: EditText? = null
     //    private var mEdtUsername: EditText? = null
-    private var presenter: PresenerImpl? = null
+    private var presenter: LoginPresenerImpl? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        presenter = PresenerImpl(this)
+        presenter = LoginPresenerImpl(this)
 
         val mEdtPass = findViewById(R.id.editText2) as EditText
         val mBtnLogin = findViewById(R.id.button_login) as Button
