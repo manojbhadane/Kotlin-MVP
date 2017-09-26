@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.itgurussoftware.kotlinmvpdemo"
+<manifest package="com.manojbhadane.kotlinmvpdemo"
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".LoginActivity">
+        <activity android:name="com.manojbhadane.kotlinmvpdemo.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.itgurussoftware.kotlinmvpdemo;
+package com.manojbhadane.kotlinmvpdemo;
 
 import org.junit.Test;
 

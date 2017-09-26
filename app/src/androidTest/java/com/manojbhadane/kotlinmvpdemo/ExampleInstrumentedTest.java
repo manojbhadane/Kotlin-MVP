@@ -1,4 +1,4 @@
-package com.itgurussoftware.kotlinmvpdemo;
+package com.manojbhadane.kotlinmvpdemo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
