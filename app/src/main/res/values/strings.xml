@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">KotlinMVPDemo</string>
+
+    <string name="enter_username">Please enter username</string>
+    <string name="enter_password">Please enter password</string>
+    <string name="user_saved">user loggedIn successfully</string>
+
+</resources>
