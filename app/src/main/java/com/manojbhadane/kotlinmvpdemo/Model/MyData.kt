@@ -1,4 +1,4 @@
-package com.manojbhadane.kotlinmvpdemo.Model
+package com.manojbhadane.kotlinmvpdemo.model
 
 /**
  * Created by manoj.bhadane on 27-09-2017.

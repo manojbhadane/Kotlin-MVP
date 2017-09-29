@@ -1,4 +1,4 @@
-package com.manojbhadane.kotlinmvpdemo.Listener
+package com.manojbhadane.kotlinmvpdemo.listener
 
 /**
  * Created by manoj.bhadane on 27-09-2017.

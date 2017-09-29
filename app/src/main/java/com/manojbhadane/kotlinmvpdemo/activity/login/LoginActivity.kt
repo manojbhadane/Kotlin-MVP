@@ -1,11 +1,11 @@
-package com.manojbhadane.kotlinmvpdemo.Login
+package com.manojbhadane.kotlinmvpdemo.activity.login
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.manojbhadane.kotlinmvpdemo.Dashboard.DashBoardActivity
+import com.manojbhadane.kotlinmvpdemo.activity.dashboard.DashBoardActivity
 import com.manojbhadane.kotlinmvpdemo.R
 
 class LoginActivity : AppCompatActivity(), LoginView {

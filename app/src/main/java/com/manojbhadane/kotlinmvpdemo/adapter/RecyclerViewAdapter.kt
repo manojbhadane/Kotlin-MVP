@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.manojbhadane.kotlinmvpdemo.Listener.RecyclerViewClickListener
-import com.manojbhadane.kotlinmvpdemo.Model.MyData
+import com.manojbhadane.kotlinmvpdemo.listener.RecyclerViewClickListener
+import com.manojbhadane.kotlinmvpdemo.model.MyData
 import com.manojbhadane.kotlinmvpdemo.R
 
 /**
