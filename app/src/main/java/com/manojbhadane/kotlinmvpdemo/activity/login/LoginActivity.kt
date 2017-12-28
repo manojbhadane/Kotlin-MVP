@@ -38,7 +38,6 @@ class LoginActivity : BaseActivity(), LoginView {
     }
 
     override fun proceedToNext() {
-        StyleableToast.makeText(this, getString(R.string.user_saved), Toast.LENGTH_LONG, R.style.MyToast).show();
         startActivity(Intent(this, DashBoardActivity::class.java))
     }
 
