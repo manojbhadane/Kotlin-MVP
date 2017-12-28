@@ -2,50 +2,48 @@ package com.manojbhadane.kotlinmvpdemo.activity.login
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.Toolbar
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.manojbhadane.kotlinmvpdemo.activity.dashboard.DashBoardActivity
 import com.manojbhadane.kotlinmvpdemo.R
+import com.manojbhadane.kotlinmvpdemo.activity.BaseActivity
+import com.manojbhadane.kotlinmvpdemo.activity.dashboard.DashBoardActivity
+import com.muddzdev.styleabletoastlibrary.StyleableToast
 
-class LoginActivity : AppCompatActivity(), LoginView {
+class LoginActivity : BaseActivity(), LoginView {
 
     lateinit var mBtnLogin: Button
-
+    lateinit var mToolbar: Toolbar
     private var presenter: LoginPresenerImpl? = null
 
-    override fun onCreate(savedInstanceState: android.os.Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    override fun getLayoutResId(): Int {
+        return R.layout.activity_main;
+    }
 
+    override fun init() {
         presenter = LoginPresenerImpl(this)
 
+        mToolbar = findViewById(R.id.toolbar) as Toolbar
         mBtnLogin = findViewById(R.id.button_login) as Button
         val mEdtPass = findViewById(R.id.editText2) as EditText
         val mEdtUsername = findViewById(R.id.editText) as EditText
+
+        setSupportActionBar(mToolbar);
+        mToolbar.setTitle("Login")
 
         mBtnLogin.setOnClickListener() {
             presenter?.processLogin(mEdtUsername.text.toString(), mEdtPass.text.toString())
         }
     }
 
-    override fun showEmptyNameError() {
-        showToast(getString(R.string.enter_username))
-    }
-
-    override fun showEmptyPassError() {
-        showToast(getString(R.string.enter_password))
-    }
-
-    override fun showUserSaved() {
-        showToast(getString(R.string.user_saved))
+    override fun proceedToNext() {
+        StyleableToast.makeText(this, getString(R.string.user_saved), Toast.LENGTH_LONG, R.style.MyToast).show();
         startActivity(Intent(this, DashBoardActivity::class.java))
     }
 
-    override fun showUserDetails() {
+    override fun showMessage(resid: Int) {
+        StyleableToast.makeText(this, getString(resid), Toast.LENGTH_LONG, R.style.ErrorToast).show();
     }
 
-    fun showToast(str: String) {
-        Toast.makeText(this, "$str", android.widget.Toast.LENGTH_SHORT).show()
-    }
 }
