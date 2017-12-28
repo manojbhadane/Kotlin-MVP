@@ -12,17 +12,14 @@ import com.manojbhadane.kotlinmvpdemo.R
 /**
  * Created by manoj.bhadane on 27-09-2017.
  */
-class RecyclerViewAdapter(val list: ArrayList<MyData>, val listener: RecyclerViewClickListener) : RecyclerView.Adapter<RecyclerViewAdapter.Viewholder>() {
-
-
+class RecyclerViewAdapter(val list: ArrayList<MyData>, val listener: RecyclerViewClickListener) : RecyclerView.Adapter<RecyclerViewAdapter.Viewholder>()
+{
     override fun getItemCount(): Int {
         return list.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): Viewholder {
         val v = LayoutInflater.from(parent?.context).inflate(R.layout.listitem_recyclerview, parent, false)
-
-
         return Viewholder(v)
     }
 
@@ -36,7 +33,7 @@ class RecyclerViewAdapter(val list: ArrayList<MyData>, val listener: RecyclerVie
         val mTxt = itemView.findViewById(R.id.txt) as TextView
 
         fun bindItems(data: MyData) {
-            mTxt.text = data.Name
+            mTxt.text = data.PersonName
         }
     }
 }

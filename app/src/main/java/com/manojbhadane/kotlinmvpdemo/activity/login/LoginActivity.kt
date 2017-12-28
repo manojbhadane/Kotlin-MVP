@@ -44,5 +44,4 @@ class LoginActivity : BaseActivity(), LoginView {
     override fun showMessage(resid: Int) {
         StyleableToast.makeText(this, getString(resid), Toast.LENGTH_LONG, R.style.ErrorToast).show();
     }
-
 }
